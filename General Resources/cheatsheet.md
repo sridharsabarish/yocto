@@ -4,3 +4,9 @@
 - `runqemu` : The command to run QEMU
 
 
+## Track variable
+bitbake -e ^VARIABLE
+
+
+## Dependency Graph thingy?
+#todo

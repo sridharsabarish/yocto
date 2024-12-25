@@ -2,7 +2,7 @@
 
 You have before you a coin with the world illuminati inscribed on it and you find a piece of puzzle that contains the hidden meaning of the word illuminiati. Solve the piece of puzzle to keep going,.
 
-
+// Todo : Clean up the code below and make it a bit easier.
 
 ```sh
 
