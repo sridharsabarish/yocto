@@ -1,14 +1,18 @@
-# Make file
+# Exercise 2: Make
 
-Objective:
+## Objective:
 
-In this exercise, we will use make to understand basic syntax.
+- You're given a make file, some of whose target won't compile.
+- The goal of this exercise is to solve those errors and get the code to compile.
 
-## useful files.
+## Areas's Touched
+-  basic syntax.
+
+### Files
 * `blah.c` and `blah.sh`
-* They are incomplete, fill them out to solve the issues!
 
 
 
-# Todo 
-* Direct and late expansions can be an exercise too. #todo
+
+
+## Duration : 10-15 mins.
