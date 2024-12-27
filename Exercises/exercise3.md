@@ -6,6 +6,9 @@
     * Recipe can be of any name.
     * The error message should be given during the INSTALL phase of the recipe.
 * Make the recipe create a file and copy this file to $HOME
-
+* Create a folder too.
+* Refer to the slides for more info!!
 
 * TBD: More Research needed.
+
+
