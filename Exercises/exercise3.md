@@ -9,6 +9,17 @@
 * Create a folder too.
 * Refer to the slides for more info!!
 
+
+# Some theory about writing loggin in Python
+
+
+# some theory about writing logs in Bash
+
+
+
+# Some markers to see how they are doing would be nice! #Todo
+
+
 * TBD: More Research needed.
 
 
