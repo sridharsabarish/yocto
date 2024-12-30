@@ -1,5 +1,110 @@
 # Exericse : Treasure Hunt
 
+
+Q1. Guess the output - Simple assignment
+
+
+```sh
+
+A = "Hello"
+B = "Yocto"
+C = "Embedded"
+D = {A}{B}
+echo $B
+echo $A
+```
+
+Q2. Guess the output - With minor Append Operations
+ Remember we can append with and without spaces!
+```sh
+
+A = "Hello"
+B = "Yocto"
+C = {A}{B}
+A +="Sweden"
+B .="OpenEmbedded"
+echo $B
+echo $A
+
+```
+
+
+
+Q3. Guess the output - Conditional Assignment
+
+```sh
+ A?="Work"
+ B??="Home"
+ A="Cat"
+ A:="Dog"
+ print $A
+ print $B
+ 
+```
+
+
+Q3. Guess the output - Now with a little twist
+
+```sh
+
+A = "Hello"
+B = "Yocto"
+C = {A}{B}
+A .=" Sweden"
+B =+"OpenEmbedded"
+echo $B
+echo $A
+
+```
+
+
+
+Q4. Guess the output - Now with a little twist
+
+```sh
+
+A = "Hello"
+A:french = "Bonjour,"
+B = "Yocto"
+B:french = "comment ca va?"
+C = {A}{B}
+A:append =" Sweden!"
+B =+ "OpenEmbedded"
+echo $B
+echo $A
+
+```
+
+Q4. Guess the output - Now with a little twist
+
+
+Overrides changes the way variables behave, how does the order change?
+
+```local.conf
+
+OVERRIDES += "french:spanish"
+
+```
+
+
+
+```sh
+
+A = "Hello"
+A:french = "Bonjour!"
+B = "Yocto"
+B:french = "comment ca va?"
+C = {A}{B}
+A .=" Sweden"
+B =+"OpenEmbedded"
+echo $B
+echo $A
+```
+
+
+# todo more below
+
+
 ## Something to get them started.
 * Think of 4-5 simple exercises for them.
 * With Hints and answers
@@ -11,10 +116,11 @@ You have before you a coin with the world illuminati inscribed on it and you fin
 
 ```sh
 
-A = "Hello"
-B := A
+Hello = "Hello!"
+Hello ?= "Hej!"
+
 C += $A
-A = "Bonjour"
+Hello:french = "Bonjour!"
 C:override = "This was a joke"
 E= "This $A"
 D:open =+ $E $C

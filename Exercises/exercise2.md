@@ -1,16 +1,24 @@
 # Exercise 2: Make
 
+Make is an automation tool, that is often used to improve the build process. 
+This exercise serves as a mild refresher to Make and sets the precendence for the upcoming exercises in Bibtake.
+
+Yocto uses Make as part of its build system, to automate the creation of embedded linux distributions.
+
+
+# Todo : Refine this para more
+Make is integral in Yocto’s BitBake tool, which processes recipes and layers to build software packages. It helps manage dependencies, compile code, and execute tasks like installation and packaging. Make's efficiency in handling complex workflows complements Yocto’s modular and flexible approach to embedded systems. Together, they streamline the build process for customized Linux distributions targeting embedded devices.
+
+# Todo : Add some more indepth information on Make.
+
 ## Objective:
-- Make Make Make again.
-- The makefile has some targets, some of which wouldn't compile. This is a mess.
+- Fix the Makefile, so that we can build some linux kernel modules.
 
-- The goal of this exercise is to solve those errors and get the code to compile.
-
-## Areas's Touched
--  basic syntax.
+## Principles Covered
+-  Syntax
 
 ### Files
-* `blah.c` and `blah.sh`
+* `yocto_driver.c` and `build.sh` 
 
 
 
@@ -25,5 +33,5 @@ Check the folder for make and see what targets it has.
 
 <details>
 <summary>hint2</summary>
-What happens when you run "Make"
+Errors give a good understanding. Take a look into the error and Fix it.
 </details>

@@ -1,6 +1,81 @@
-# Exercise : Add External Layer to Poky
-* In this exercise we will add an external layer to current poky build!
-* TBD
+# Exercise : Create a layer
+* In this exercise we will explore and create new layers for our work.
+* We will move the recipe we create into this layer and try to build it ourselves.
 
-* What can we do about this?
-    * Maybe give them some BSP Layer? 
+
+`bitbake-layers` is a powerful comand, it can do almost everything we want with layers.
+
+1. Identify what layers we have in the current poky build!
+    - ` bitbake-layers show-layers`
+
+1. There are three major fields in it, layer-priority, -layer-index, and path.
+
+1. There is a file which keeps track of these layers, do you which one it it is?
+
+    <details>
+
+    <summary>hint</summary>
+    
+    `bblayers.conf`
+
+    </details>
+
+1. Go to the build folder and try to create a new layer called meta-experiment
+
+    - `bitbake-layers` is a useful tool, can you find out how to create a layer using its help documentation?
+
+
+1. Do a tree command now and see how the directory structure looks like?
+
+   - `tree`
+
+1. Create a simple recipe called solna-yocto and create a recipe called solna.bb
+
+1. Use this c code to create a file 'hello.c'
+    ```c
+    //Simple Hello World Program 
+    #include<stdio.h>
+    int main() { 
+    printf("Hello World , Created Bitbake recipe successfully\n"); 
+    return 0;
+    }
+
+    ```
+
+1. Modify the created recipe to include this file and compile the file so that we get the output
+
+    # Todo : fix this code below.
+    ```sh
+
+    DESCRIPTION = "Hello world from solna"
+    LICENSE = "MIT"
+    LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=asd"
+
+    SRC_URI = "file://solna.c"
+
+    S = "${WORKDIR}"
+
+    do_compile() {
+            ${CC} solna.c ${LDFLAGS} -o solna
+    }
+
+    do_install() {
+            install -d ${D}${bindisr}
+            install -m 0755 solna ${D}${bindir}
+    }
+
+    ```
+
+1. Select Machine configuration and hello to rootfs
+
+IMAGE_INSTALL_append = " hello" #double check
+
+
+<details>
+
+<summary>hint</summary>
+
+`bitbake-layers create-layer ../meta-experiments`
+
+</details>
+

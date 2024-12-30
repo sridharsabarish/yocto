@@ -8,3 +8,7 @@
 7. BSP Layers ?
 8. Distro Layers ?
 9. Application Development.
+10. Best practices.
+
+
+# Use Presentation segments as well.
