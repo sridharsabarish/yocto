@@ -1,31 +1,53 @@
 # Exercise: Explore a recipe
+* Yocto uses several metadata, of which the first and most importnat one is a recipe.
+* A recipe defines several tasks which could include how to
+    - fetch,
+    - configure,
+    - build
+    - install software packages in an embedded linux system.
 
-* A recipe defines how to fetch, configure, build and install software packages in an embedded linux system.
+//Recheck
 * It consists of metadata, instructions, and dependencies, typically following a bitbake syntax.
-* Recipes ensures consistency and automation in build process, enabling creation of customized software layer.
+
+## Why?
+* Recipes ensures 
+-   consistency and automation in build process,
+-   enabling creation of customized software layer.
 
 
 
-
+## How it looks.
 A Recipe usually has an extension `.bb` and the appends for the recipes follow the `.bbappend` extensions.
 
-Q1. Can you identify how many recipes are present in the directory `~/work/poky/poky/meta-poky`
 
-- todo : give hint
+## Exercises
+1. Can you identify how many recipes are present in the directory `~/work/poky/poky/meta-poky`
 
-Q2. There is a recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, find this recipe and do a `cat` on this recipe.
+    <details>
+    <summary>Hint</summary>
+    Can we use `find " and check for the files with the extension that matches a recipe?
+    </details>
 
-Q3. This recipe performs certain task, can you find the task which uses BB_FATAL?
 
-Q4. Change the warning type of this recipe to BB_ERROR and updated the error message to `Not so fatal anymore`.
+1. There is a mystery recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, can you find this recipe and do a `cat` on this recipe.
 
-Q5. One of the task is trying to create a folder can you identify which command it is?
+1. This recipe performs certain tasks, can you find the task which uses a bitbake log called BB_FATAL?
 
-Q6. Use the same command in do_install to create a dummy text file `dummy.txt' in the sys_conf directory.
+1. Since the situation is not Fatal, change the warning type of this task to BB_ERROR and updated the error message to `Not so fatal anymore`.
 
-Q7. There are certain mysterious symbols, D, S, SYS_CONF, and so on which yocto uses in its dictionary, can you print the variables and see where they point to?
+1. One of the other task is trying to `create a folder` can you identify which command it is?
 
-Q8. This recipe has a `.bbappend` file, can you try to add a BB_ERROR() to the do_configure task. Note: you will need to use do_configure_append() to do that.
+    <details>
+    <summary>hint</summary>
+    What commands can you use to create a folder?
+    </details>
+1. There are a lot of Jargons, D, S, SYS_CONF_DIR, and what not? How do we find what it means? Read the info on #Todo : give the directory.
+
+1. Use the same command in `do_install` task to create a dummy text file `dummy.txt' in the `SYS_CONF_DIR` directory.
+
+1. There are certain mysterious symbols, D, S, SYS_CONF, and so on which yocto uses in its dictionary, can you print the variables and see where they point to?
+
+1. This recipe has a `.bbappend` file, can you try to add a BB_ERROR() to the do_configure task. Note: you will need to use do_configure_append() to do that.
 
 
 
@@ -56,3 +78,6 @@ Q8. This recipe has a `.bbappend` file, can you try to add a BB_ERROR() to the d
 * TBD: More Research needed.
 
 
+
+## Advanced Exercises (If you have time)
+- #Todo
