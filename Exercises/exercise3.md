@@ -1,83 +1,178 @@
-# Exercise: Explore a recipe
-* Yocto uses several metadata, of which the first and most importnat one is a recipe.
-* A recipe defines several tasks which could include how to
-    - fetch,
+# Exericse : Treasure Hunt
+
+- BitBake variable syntax is crucial for configuring and controlling the build process in the Yocto Project.
+
+//More refinement on this needed.
+- Variables in BitBake are defined using the = or := operator, where = is used for normal assignment and := for immediate assignment. 
+ 
+
+ ## Relevant example
+ For example, SRC_URI = "http://example.com/source.tar.gz" specifies the source URL, while DEPENDS += "library" adds dependencies.
+ 
+ 
+  The use of `${}` allows variable interpolation, like  `SRC_URI = "${PV}.tar.gz"`, dynamically referencing other variables. 
+  
+  ## Why?
+  Understanding and using BitBake variable syntax is important because 
+  - it allows fine-grained control over the build process, 
+    - enabling users to 
     - configure,
-    - build
-    - install software packages in an embedded linux system.
-
-//Recheck
-* It consists of metadata, instructions, and dependencies, typically following a bitbake syntax.
-
-## Why?
-* Recipes ensures 
--   consistency and automation in build process,
--   enabling creation of customized software layer.
-
-
-
-## How it looks.
-A Recipe usually has an extension `.bb` and the appends for the recipes follow the `.bbappend` extensions.
-
+    -  customize, 
+    - and extend recipes for specific embedded Linux requirements.
 
 ## Exercises
-1. Can you identify how many recipes are present in the directory `~/work/poky/poky/meta-poky`
+
+- Without using your computer, try to guess the answer what the output of a specific exercise would be.
+- If unclear, you can refer to the notes or run it in on your VM!
+
+Q1. A very simple assignment.
+
+
+```sh
+
+A = "Hello"
+B = "Yocto"
+C = "Embedded"
+D = {A}{B}
+echo $B
+echo $A
+echo $D
+```
+
+Q2. Guess the output - With minor Append Operations
+ Remember we can append with and without spaces!
+```sh
+
+A = "Hello"
+B = "Yocto"
+C = {A}{B}
+A +="Sweden"
+B .="OpenEmbedded"
+echo $B
+echo $A
+
+```
+
+
+
+Q3. Guess the output - Conditional Assignment
+
+```sh
+ A?="Work"
+ B??="Home"
+ A="Cat"
+ A:="Dog"
+ print $A
+ print $B
+ 
+```
+
+
+Q3. Guess the output - Now with a little twist
+
+```sh
+
+A = "Hello"
+B = "Yocto"
+C = {A}{B}
+A .=" Sweden"
+B =+"OpenEmbedded"
+echo $B
+echo $A
+
+```
+
+
+
+Q4. Guess the output - Now with a little twist
+
+```sh
+
+A = "Hello"
+A:french = "Bonjour,"
+B = "Yocto"
+B:french = "comment ca va?"
+C = {A}{B}
+A:append =" Sweden!"
+B =+ "OpenEmbedded"
+echo $B
+echo $A
+
+```
+
+Q4. Guess the output - Now with a little twist
+
+
+## Time to override
+
+- Overrides changes the way variables behave, how does the order change?
+
+```local.conf
+
+OVERRIDES += "french:spanish"
+
+```
+
+
+
+```sh
+
+A = "Hello"
+A:french = "Bonjour!"
+B = "Yocto"
+B:french = "comment ca va?"
+C = {A}{B}
+A .=" Sweden"
+B =+"OpenEmbedded"
+echo $B
+echo $A
+```
+
+
+# todo more below
+
+
+## Something to get them started.
+* Think of 4-5 simple exercises for them.
+* With Hints and answers
+
+
+You have before you a coin with the world illuminati inscribed on it and you find a piece of puzzle that contains the hidden meaning of the word illuminiati. Solve the piece of puzzle to keep going,.
+
+// Todo : Clean up the code below and make it a bit easier.
+
+```sh
+
+Hello = "Hello!"
+Hello ?= "Hej!"
+
+C += $A
+Hello:french = "Bonjour!"
+C:override = "This was a joke"
+E= "This $A"
+D:open =+ $E $C
+F += "Caramel"
+F ?= $D
+G ?= $H
+H = $A $B $C 
+Illuminati = $H
+
+```
+
+
+
+
+
+
+* What does illuminati mean?
+    * It should be something witty and fun! #todo
 
     <details>
-    <summary>Hint</summary>
-    Can we use `find " and check for the files with the extension that matches a recipe?
-    </details>
+<summary>hint1</summary>
+Link to the page.
+</details>
 
 
-1. There is a mystery recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, can you find this recipe and do a `cat` on this recipe.
+## Advanced Exercises
 
-1. This recipe performs certain tasks, can you find the task which uses a bitbake log called BB_FATAL?
-
-1. Since the situation is not Fatal, change the warning type of this task to BB_ERROR and updated the error message to `Not so fatal anymore`.
-
-1. One of the other task is trying to `create a folder` can you identify which command it is?
-
-    <details>
-    <summary>hint</summary>
-    What commands can you use to create a folder?
-    </details>
-1. There are a lot of Jargons, D, S, SYS_CONF_DIR, and what not? How do we find what it means? Read the info on #Todo : give the directory.
-
-1. Use the same command in `do_install` task to create a dummy text file `dummy.txt' in the `SYS_CONF_DIR` directory.
-
-1. There are certain mysterious symbols, D, S, SYS_CONF, and so on which yocto uses in its dictionary, can you print the variables and see where they point to?
-
-1. This recipe has a `.bbappend` file, can you try to add a BB_ERROR() to the do_configure task. Note: you will need to use do_configure_append() to do that.
-
-
-
-## Objective
-
-
-* 
-### Write a recipe from scratch.
-* This recipe should output a message during the build process.
-    * You can use BB_WARN, BB_ERROR or BB_DEBUG
-    * Recipe can be of any name.
-    * The error message should be given during the INSTALL phase of the recipe.
-* Make the recipe create a file and copy this file to $HOME
-* Create a folder too.
-* Refer to the slides for more info!!
-
-
-# Some theory about writing loggin in Python
-
-
-# some theory about writing logs in Bash
-
-
-
-# Some markers to see how they are doing would be nice! #Todo
-
-
-* TBD: More Research needed.
-
-
-
-## Advanced Exercises (If you have time)
-- #Todo
+// Todo
