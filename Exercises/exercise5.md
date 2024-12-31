@@ -1,14 +1,14 @@
 # Exercise : Create a layer
 * In this exercise we will explore and create new layers for our work.
-* We will move the recipe we create into this layer and try to build it ourselves.
+* We will move the recipe we created in the previous exercise into this layer and try to build it ourselves.
 
-
+## The tool
 `bitbake-layers` is a powerful comand, it can do almost everything we want with layers.
 
+## Exercises
 1. Identify what layers we have in the current poky build!
     - ` bitbake-layers show-layers`
-
-1. There are three major fields in it, layer-priority, -layer-index, and path.
+There are three major fields in it, layer-priority, -layer-index, and path. Can
 
 1. There is a file which keeps track of these layers, do you which one it it is?
 
@@ -20,16 +20,22 @@
 
     </details>
 
-1. Go to the build folder and try to create a new layer called meta-experiment
+1. The `bitabke-layers` is a useful tool, one of its commands helps us make a new layer.
 
-    - `bitbake-layers` is a useful tool, can you find out how to create a layer using its help documentation?
+<details>
+
+<summary>hint</summary>
+Its help documentation gives us an hint 
+
+</details>
+Can you go to the build folder and try to create a new layer called `meta-experiment`
 
 
-1. Do a tree command now and see how the directory structure looks like?
+1. Can you identify the three main folders inside the newly created layer?
 
    - `tree`
 
-1. Create a simple recipe called solna-yocto and create a recipe called solna.bb
+1. Create a simple recipe called `solna-yocto` and create a recipe called `solna.bb`
 
 1. Use this c code to create a file 'hello.c'
     ```c
@@ -79,3 +85,4 @@ IMAGE_INSTALL_append = " hello" #double check
 
 </details>
 
+// more review needed.

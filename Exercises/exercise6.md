@@ -1,8 +1,8 @@
 # IMAGES
 
 # What is an image?
-* A Yocto image is a custom Linux system built for embedded devices, created using the Yocto Project.
-* It combines the Linux kernel, essential software, and settings into one ready-to-use package. 
+* A Yocto image is a **custom Linux system** built for embedded devices, created using the Yocto Project.
+* It combines the **Linux kernel, essential software, and settings** into one ready-to-use package. 
 * You can tailor the image to include only the software and features you need, making it lightweight and efficient for specific hardware. 
 * The Yocto build system makes it easy to select what goes into the image, ensuring it’s optimized for performance. 
 * Once built, the image can be installed on devices, offering a stable and flexible solution for embedded projects.
@@ -14,6 +14,7 @@
 
 
 ## Part 0
+// Todo : verify the text below.
 1. An image looks like a recipe, but it comes under the recipes-images* folder. Which one of this is not an image in your folder.
     1. core-image-x11
     2. core-image-full-cmdline
@@ -29,7 +30,12 @@
 
 ### Todo : Add more flavour and drama to the exercise
 
-1. IMAGE has several attributes that we can use to shape our iamge, can you find the attribute that is used to change the filesystem type?
+1. IMAGE has several attributes that we can use to shape our image, can you find the attribute that is used to change the filesystem type?
+
+    <details>
+        <summary>hint</summary>
+        IMAGE_FS_TYPE
+    </details>
 
 1. Can you use this variable to change the filesystem to .ubi and .tar.gz
 
@@ -50,7 +56,7 @@ and understand what other ways we can use to customize an image.  (Focus especia
 Q1. Now use that method to make the change.
 
 
-
+// More refinement needed.
 ## Part 3  : Run on QEMU
 * Something about settings for QEMU.
 * Make them go through qemu help and set certain attributes.

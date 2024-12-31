@@ -73,3 +73,4 @@ In this example, we will create a patch using devtool on our existing recipe.
 
 ### Todo : Add more flavour and drama to the exercise
 
+## Advanced Exercises (If time permits)
