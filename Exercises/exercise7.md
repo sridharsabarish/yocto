@@ -1,9 +1,9 @@
 # Exercise7: Devtool, Create a patch
 
 
-`Devtool`  is part of the extended SDK, this can be used for working with patches.
+`Devtool`  is part of the extended SDK. Extended SDK makes it relatively easier to work with patches and other stuff.
 
-## Part 0
+## Part 0 - Some basics.
 
 1. What devtool command can you use to extract a recipe?
 2. Once extracted, where can you find the source code of the recipe?
@@ -14,7 +14,7 @@
 ## Part 1 - Extracting a recipe 
 
 
-## Part 1 - Creating a new patch
+## Part 2 - Creating a new patch
 - In Yocto, a patch is a file that makes changes to the source code, like fixing bugs or adding features.
 
 - It is added to a recipe and applied during the build process.
