@@ -5,23 +5,24 @@
 - Run the Poky Build
 - Get an idea of what we are dealing with.
 
-## Poky
-- Poky, is the **reference distribution** of the yocto project. 
+## Meet Poky
+
+- Poky, is the **reference distribution** of the Yocto Project which uses OpenEmbedded build system Technology. 
+
 - It is a **toolset for building** embedded linux systems.
 
 
-    // More review needed for content below.
-    - It gives us
-        1. metadata, 
-        1. recipes, 
-        1. templates to help create these distributions
+    - Its made up of
+        1. Collection of tools 
+        1. Configuration files
+        1. Recipe Data a.k.a metadata
+        
+    
     - Its **key features** include 
     - flexible configuration,
-    - support for cross compilation
+    - support for cross compilation using bitbake-tool.
     - ability to generate minimal and optimized system images.
 
-## Todo : A bit out of place?
-Poky is used to verify Yocto Project and is also a good place to start with exploration.
 
 ## Where to find it?
 - In this Virtual Machine(VM), Poky is available at ~/work/poky. 
@@ -29,7 +30,7 @@ Poky is used to verify Yocto Project and is also a good place to start with expl
 
 
 ## Exercises
-1. If you explore the first two layers of poky's directory, there is a mysterious script.
+1. If you explore the first two layers of poky's directory, there is a mysterious bash script.
 Can you find it and identify what is at ln:#enterline?
     <details>
     <summary>hint</summary>
@@ -75,7 +76,7 @@ Can you find it and identify what is at ln:#enterline?
 
 
 
-## other stuff
+## Intermediate challenges # Todo
 **What commands should we use?**
 
 - Answer the question based on the build.
@@ -94,13 +95,31 @@ runqemu
 ## Advanced Challenges
 
 1. Identify the ports used by QEMU and SSH into the VM.
+
+    <details>
+    <summary>hint</summary>
+    
+    Option 1:
+    ` ps aux | grep qemu`
+
+    Option 2: 
+    `netstat -tuln | grep qemu`
+
+
+    </details>
+
+
 1. **Explore the Applications** available inside the build!
-1. There is a password hidden, find it.
+    <details>
+    <summary>hint</summary>
 
-Todo 
-* Maybe something about scping a file? 
-* Or something about printing the number of processors in it? 
-
+    check the `usr/bin` and `/usr/sbin` folders
+    
+    </details>
+1. There is a security vulnerability in this build, a user has by mistake saved his password in it, find it. 
+#Todo: Create this file.
+    
+1. Transfer a file "Example.txt" from your computer to this QEMU instance.
 
 
 
