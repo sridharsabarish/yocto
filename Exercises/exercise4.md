@@ -1,4 +1,12 @@
 # Exercise: Explore a recipe
+
+## Objective
+- Explore a recipe
+- Understand what components make up a recipe.
+
+
+## Introduction
+
 * Yocto uses several metadata, of which the first and most importnat one is a recipe.
 * A recipe defines several tasks which could include how to
     - fetch,
@@ -20,6 +28,22 @@
 A Recipe usually has an extension `.bb` and the appends for the recipes follow the `.bbappend` extensions.
 
 
+
+# Some theory about writing loggin in Python
+
+
+# some theory about writing logs in Bash
+
+
+
+
+
+
+
+
+
+
+
 ## Exercises
 1. Can you identify how many recipes are present in the directory `~/work/poky/poky/meta-poky`
 
@@ -29,7 +53,7 @@ A Recipe usually has an extension `.bb` and the appends for the recipes follow t
     </details>
 
 
-1. There is a mystery recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, can you find this recipe and do a `cat` on this recipe.
+1. There is a mystery recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, can you find this recipe and do a `cat` on this recipe. #todo:Create this recipe.
 
 1. This recipe performs certain tasks, can you find the task which uses a bitbake log called BB_FATAL?
 
@@ -51,25 +75,9 @@ A Recipe usually has an extension `.bb` and the appends for the recipes follow t
 
 
 
-## Objective
-
-
-* 
-### Write a recipe from scratch.
-* This recipe should output a message during the build process.
-    * You can use BB_WARN, BB_ERROR or BB_DEBUG
-    * Recipe can be of any name.
-    * The error message should be given during the INSTALL phase of the recipe.
-* Make the recipe create a file and copy this file to $HOME
-* Create a folder too.
-* Refer to the slides for more info!!
-
-
-# Some theory about writing loggin in Python
-
-
-# some theory about writing logs in Bash
-
+# Advanced
+1. Something about include?
+1. Something about classes?
 
 
 # Some markers to see how they are doing would be nice! #Todo
@@ -80,4 +88,4 @@ A Recipe usually has an extension `.bb` and the appends for the recipes follow t
 
 
 ## Advanced Exercises (If you have time)
-- #Todo
+- 
