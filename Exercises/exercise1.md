@@ -30,7 +30,7 @@
 
 
 ## Exercises
-1. If you explore the first two layers of poky's directory, there is a mysterious bash script.
+1. If you explore the first two layers of poky's directory, there is a mysterious shell script by the name of `oe-init-build-env`
 Can you find it and identify what is at ln:#enterline?
     <details>
     <summary>hint</summary>
@@ -38,7 +38,8 @@ Can you find it and identify what is at ln:#enterline?
     </details>
 
 
-1. Once you have read this script, now Make use of this script and go to the build directory of poky. 
+1. Once you have read this script, now source this script this will take you to the build directory of poky. 
+
     <details>
     <summary>hint</summary>
     You can use find . -name "*.conf" to find all the conf files inside a specific directory
@@ -48,7 +49,7 @@ Can you find it and identify what is at ln:#enterline?
 1. Can you list the `*.conf` files inside this directory?
 
 
-1. Inside poky, there are several images, can you find out which directory has the `*.ext4` image?
+1. Inside poky, there are several images, can you find out which directory has the rootfs images?
     <details>
     <summary>hint</summary>
     You can use find . -name "*.ext4" to find the file, from which you can infer the directory.
@@ -60,7 +61,7 @@ Can you find it and identify what is at ln:#enterline?
     <summary>hint</summary>
 
     - Consider using QEMU to Run the images.
-    - You can use the command `runqemu --nographic` to get started.
+    - You can use the command `runqemu nographic` to get started.
 
     </details>
 
@@ -68,7 +69,7 @@ Can you find it and identify what is at ln:#enterline?
     <details>
     <summary>hint</summary>
 
-    - Use the command `free -g` to find the memory
+    - Use the command `free` to find the memory
     - Use the command `nproc` to find the processors
 
     </details>

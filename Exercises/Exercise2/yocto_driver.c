@@ -1,5 +1,9 @@
 #include<linux/module.h>
 #include<linux/init.h>
+#include<linux/uaccess.h>
+#include<linux/module.h>
+#include<linux/fs.h>
+#include<linux/proc_fs.h>
 
 MODULE_LICENSE("MIT");
 MODULE_AUTHOR("A Yocto Developer");
@@ -16,5 +20,6 @@ static void __exit yocto_driver_exit(void)
     printk(KERN_INFO "Goodbye Yocto\n");
 }
 
-module_init(hello_init);
-module_exit(hello_exit);
+module_init(yocto_driver_init);
+module_exit(yocto_driver_exit);
+

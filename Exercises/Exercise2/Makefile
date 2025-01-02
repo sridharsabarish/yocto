@@ -1,11 +1,12 @@
 # something is wrong with hello, what could it be?
+
+obj-m += yocto-driver.o
 hello:
 	echo "This is a simple Makefile"
 	echo "This line will print if the file hello does not exist."
 
-# Maybe the target works as intended, but the file has a bug?
-all: yocto_driver.c
-     make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+all:    yocto-driver.c
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean

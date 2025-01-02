@@ -25,6 +25,10 @@
 - Without using your computer, try to guess the answer what the output of a specific exercise would be.
 - If unclear, you can refer to the notes or run it in on your VM!
 
+// Refine
+Way to test : bitbake -e ^VARIABLE recipename
+
+
 Q1. A very simple assignment.
 
 
