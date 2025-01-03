@@ -1,3 +1,4 @@
 # option exercise on BSP exericse 12
 
-TODO more.
+* Create your own Yocto Kernel recipe
+* Defconfig stuff.

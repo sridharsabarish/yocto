@@ -7,22 +7,30 @@
 * The Yocto build system makes it easy to select what goes into the image, ensuring it’s optimized for performance. 
 * Once built, the image can be installed on devices, offering a stable and flexible solution for embedded projects.
 
-
+# Rework
 * Maybe some story about different image types, some drama, then make the student choose the correct image type
 * Build an image of the format UBI and tar.gz
 * Run this check against a `tester code!`
 
 
-## Part 0
-// Todo : verify the text below.
-1. An image looks like a recipe, but it comes under the recipes-images* folder. Which one of this is not an image in your folder.
-    1. core-image-x11
+## Part 0 : Getting Started
+
+If you recollect, when we worked with `source oe-init-build-env`, the text displayed certain images that we could "bake" which looked like "core-image-*".
+
+1. An image looks like a recip,  Which one of these images do you not see when you source oe-init-build-env?
+
+    1. core-image-weston
     2. core-image-full-cmdline
     3. core-image-x12
     4. core-image-sato
 
-1. Under which folder can you find the `core-image-minimal`
-2. Find this image and identify what distro it is using!
+1. Under which folder can you find the `core-image-full-cmdline` and `core-image-minimal`?
+
+    Hint
+
+    - `find . -name "core-image-full-cmdline.bb"`
+
+1. Find this image and see if ssh-server is available in this?
 
 
 
@@ -37,6 +45,7 @@
         IMAGE_FS_TYPE
     </details>
 
+// Researrch what command is needed. FIll in hint and test.
 1. Can you use this variable to change the filesystem to .ubi and .tar.gz
 
 1. We have a requirement to change the size of the filesystem to 2GB maximum, this can be done with another variable, can you set that?

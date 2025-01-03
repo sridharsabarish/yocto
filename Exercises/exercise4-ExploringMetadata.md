@@ -1,13 +1,14 @@
-# Exercise: Explore a recipe
+# Exercise: Explore Metadata and Recipes
+
 
 ## Objective
-- Explore a recipe
+- Explore metadata and intro to recipes
 - Understand what components make up a recipe.
 
 
 ## Introduction
 
-* Yocto uses several metadata, of which the first and most importnat one is a recipe.
+* Yocto uses several metadata, of which the first and most important one is a recipe.
 * A recipe defines several tasks which could include how to
     - fetch,
     - configure,
@@ -29,18 +30,6 @@ A Recipe usually has an extension `.bb` and the appends for the recipes follow t
 
 
 
-# Some theory about writing loggin in Python
-
-
-# some theory about writing logs in Bash
-
-
-
-
-
-
-
-
 
 
 
@@ -53,11 +42,11 @@ A Recipe usually has an extension `.bb` and the appends for the recipes follow t
     </details>
 
 
-1. There is a mystery recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, can you find this recipe and do a `cat` on this recipe. #todo:Create this recipe.
+1. There is a mystery recipe `xyz.bb` that has been created and this recipe is somehwere on the outer directory, can you find this recipe and do a `cat` on this recipe. 
 
-1. This recipe performs certain tasks, can you find the task which uses a bitbake log called BB_FATAL?
+1. This recipe performs certain tasks, can you find the task which uses a bitbake log called bbfatal?
 
-1. Since the situation is not Fatal, change the warning type of this task to BB_ERROR and updated the error message to `Not so fatal anymore`.
+1. Since the situation is not Fatal, change the warning type of this task to bberror and updated the error message to `Not so fatal anymore`.
 
 1. One of the other task is trying to `create a folder` can you identify which command it is?
 
@@ -71,21 +60,11 @@ A Recipe usually has an extension `.bb` and the appends for the recipes follow t
 
 1. There are certain mysterious symbols, D, S, SYS_CONF, and so on which yocto uses in its dictionary, can you print the variables and see where they point to?
 
+1. Which command is used to read from a class?
+1. How do we make use of inc?
+1. What is the difference between an inc and a class file?
+
+
+
 1. This recipe has a `.bbappend` file, can you try to add a BB_ERROR() to the do_configure task. Note: you will need to use do_configure_append() to do that.
 
-
-
-# Advanced
-1. Something about include?
-1. Something about classes?
-
-
-# Some markers to see how they are doing would be nice! #Todo
-
-
-* TBD: More Research needed.
-
-
-
-## Advanced Exercises (If you have time)
-- 

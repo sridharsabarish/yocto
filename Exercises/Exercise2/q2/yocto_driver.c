@@ -5,10 +5,11 @@
 #include<linux/fs.h>
 #include<linux/proc_fs.h>
 
-MODULE_LICENSE("MIT");
-MODULE_AUTHOR("A Yocto Developer");
-MODULE_DESCRIPTION("A simple example Linux module");
-
+// Do we need all the lines below?
+//MODULE_LICENSE("MIT"); 
+//MODULE_AUTHOR("A Yocto Developer");
+//MODULE_DESCRIPTION("A simple example Linux module");
+// MODULE_LIC_CHECK(); 
 static int __init yocto_driver_init(void)
 {
     printk(KERN_INFO "Hello from Yocto\n");
@@ -21,5 +22,5 @@ static void __exit yocto_driver_exit(void)
 }
 
 module_init(yocto_driver_init);
-module_exit(yocto_driver_exit);
+//module_exit(robot_driver_exit); # is this correct?
 

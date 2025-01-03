@@ -29,25 +29,21 @@
 - Start by `cd ~/work/poky`.
 
 
-## Exercises
-1. If you explore the first two layers of poky's directory, there is a mysterious shell script by the name of `oe-init-build-env`
-Can you find it and identify what is at ln:#enterline?
-    <details>
-    <summary>hint</summary>
-    You can use the -L option in ls, to specify how many layers you want to see.
-    </details>
+## Part 1 : Getting Started
+1. Find the script `oe-init-build-env`, can you identify what type of license it has?
+1. What happens when you source this file? Note down the names of the images that start with core-image* on a piece of paper. We will use this later.
+1. We are now inside the build directory, there are several conf files.
+ Can you find which of these conf file is the largest by code length?
+        <details>
+        <summary>hint</summary>
+    - You can use `find . -name "*.conf"` to find all the conf files inside a specific directory
+    - Use `wc` to find word cound for a file
+    - **Pro tip**: use `xargs` if possible to combine find and wc.
+</details>
 
-
-1. Once you have read this script, now source this script this will take you to the build directory of poky. 
-
-    <details>
-    <summary>hint</summary>
-    You can use find . -name "*.conf" to find all the conf files inside a specific directory
-    </details>
-
-
-1. Can you list the `*.conf` files inside this directory?
-
+## Part 2: Exploration
+1. Choose the one with the largest lines and try to read through the comments. The file is very often used and is very well documented.
+ Can you identify what is the `DISTRO` it is using? 
 
 1. Inside poky, there are several images, can you find out which directory has the rootfs images?
     <details>
@@ -55,6 +51,11 @@ Can you find it and identify what is at ln:#enterline?
     You can use find . -name "*.ext4" to find the file, from which you can infer the directory.
     </details>
 
+## Part3: Build an image  (Skip)
+- Could take a while recommended that one person jumps to part 4 and the other tries this to avoid any issues.
+
+
+## Part 4: Running an Image
 
 1. To make things simpler, we have the binaries pre-built. We now need a way to see if the image works as intended, we however don't have a real hardware to emulate.. What can we do instead?
     <details>
@@ -64,6 +65,19 @@ Can you find it and identify what is at ln:#enterline?
     - You can use the command `runqemu nographic` to get started.
 
     </details>
+
+
+## Part 5: Comparing with other images
+
+1. Run core-image-minimal
+1. Run core-image-full-cmd-line
+
+
+## Compare the two QEMU instance
+- Compare the /usr/bin
+- What are the common files.
+
+
 
 1. You have now successfully booted into the prebuilt image, can you find out how much memory and processor cores are present in the image?
     <details>
@@ -75,22 +89,6 @@ Can you find it and identify what is at ln:#enterline?
     </details>
 
 
-
-
-## Intermediate challenges # Todo
-**What commands should we use?**
-
-- Answer the question based on the build.
-
-<details>
-<summary>hint1</summary>
-QEMU slide.
-</details>
-
-<details>
-<summary>hint2</summary>
-runqemu
-</details>
 
 
 ## Advanced Challenges

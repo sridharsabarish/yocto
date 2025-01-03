@@ -11,3 +11,11 @@
 2. Suggest three scnearios and ask what should be updated to work correctly.
 3. Some quiz on Packages and oe-pkdgat util thing.
 4. Package feeds?
+
+
+# Part 1: List packages using oe-pkgdata util
+
+
+# Todo
+1. Create this file/recipe.
+2. Package managements?

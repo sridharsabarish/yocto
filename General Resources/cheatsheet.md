@@ -113,3 +113,26 @@
    bb_warn, bb_error, bb_note
 
 
+
+# Layers
+
+1. Create a new layer
+`bitbake-layers create-layer <layername>`
+2. Add layer
+`bitbake-layers add-layer <layername>`
+
+3. Show layers
+`bitbake-layers show-layers`
+
+
+# Recipes
+1. Create a recipe
+1. Show Recipes in a file
+    - `bitbake-layers show-recipes `
+
+# IMAGES
+1. Same as recipe
+1. IMAGE_FS_TYPES - variable to change file system type
+1. IMAGE_INSTALL - install a package
+1. MOre info like this.
+

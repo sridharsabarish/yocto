@@ -5,10 +5,9 @@
 ## The tool
 `bitbake-layers` is a powerful comand, it can do almost everything we want with layers.
 
-## Exercises
+## Part 0 : Getting Started
 1. Identify what layers we have in the current poky build!
     - ` bitbake-layers show-layers`
-There are three major fields in it, layer-priority, -layer-index, and path. Can
 
 1. There is a file which keeps track of these layers, do you which one it it is?
 
@@ -20,7 +19,7 @@ There are three major fields in it, layer-priority, -layer-index, and path. Can
 
     </details>
 
-1. The `bitabke-layers` is a useful tool, one of its commands helps us make a new layer.
+1. Explore The `bitabake-layers` command and find which command helps us make a new layer.
 
 <details>
 
@@ -28,13 +27,17 @@ There are three major fields in it, layer-priority, -layer-index, and path. Can
 Its help documentation gives us an hint 
 
 </details>
-Can you go to the build folder and try to create a new layer called `meta-experiment`
+
+## Part 1 : Building a layer
+1. Go a step out of build folder and try to create a new layer called `meta-experiment`
 
 
-1. Can you identify the three main folders inside the newly created layer?
+1. Now to try the bitbake-layers show-layers command
 
-   - `tree`
+   - You will notice that this layer has not been added. This has to be added manually by bitbake-layers add-layers command.
 
+
+### Requires review:
 1. Create a simple recipe called `solna-yocto` and create a recipe called `solna.bb`
 
 1. Use this c code to create a file 'hello.c'
