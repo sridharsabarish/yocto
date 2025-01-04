@@ -13,7 +13,7 @@
 * Run this check against a `tester code!`
 
 
-## Part 0 : Getting Started
+## Part 0 : Getting Started Studying an image.
 
 If you recollect, when we worked with `source oe-init-build-env`, the text displayed certain images that we could "bake" which looked like "core-image-*".
 
@@ -34,9 +34,8 @@ If you recollect, when we worked with `source oe-init-build-env`, the text displ
 
 
 
-## Part 1
+## Part 1 : Creating an Image Recipe
 
-### Todo : Add more flavour and drama to the exercise
 
 1. IMAGE has several attributes that we can use to shape our image, can you find the attribute that is used to change the filesystem type?
 
@@ -50,8 +49,14 @@ If you recollect, when we worked with `source oe-init-build-env`, the text displ
 
 1. We have a requirement to change the size of the filesystem to 2GB maximum, this can be done with another variable, can you set that?
 
+## Part 2  -  Add our recipe to the image
 
-## Part 2
+* Add openssh to the image to enable ssh.
+* This image should contain the recipe that we made...
+* More work needed.
+* How to add?
+
+## Part 3: 
 
 Currently, the package "vim" is being set in the local.conf, this is okay for temporary use, however since local.conf is not version controlled, there is a risk that this might get lost in the subsequent revision.
 

@@ -1,5 +1,5 @@
 # Exercise 11: Package Management, Feeds and so on
-
+# Reuse existing packages or recipes with packages for easy going.
 # Objective
 * Some bug with package, make it choose a specific package.
 * Identify what should be updated is it PE, PV, or PR some kind of initial stuff

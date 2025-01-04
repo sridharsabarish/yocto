@@ -1,5 +1,11 @@
 Exercise on Troubleshooting
 
+
+
+# How to :
+- Take a working recipe from github, bitbake it and now deliberately make some errors and ask the students to fix it.
+- Should be straight forward. 
+- Needs access to ubunutu though
 # Todo fill some content.
 
 
