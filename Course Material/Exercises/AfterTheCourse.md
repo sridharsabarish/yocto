@@ -23,6 +23,10 @@
 	9. Troubleshooting : Enable GDB and also include support for profiling.
 
 
+**Note :** Remember to create Software Bill of material using
+`INHERIT += "create-spdx"`
+
+
 
 # References
 1. [Creating your own distro](https://docs.yoctoproject.org/dev-manual/custom-distribution.html)
