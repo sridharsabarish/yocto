@@ -5,12 +5,12 @@ install-toaster :
 # Target to start Toaster
 start-toaster:
 	@echo "Starting Toaster..."
-	cd ~/work/poky/poky/ && source oe-init-build-env && source toaster start
+	cd ~/git/poky/ && source oe-init-build-env && source toaster start
 
 # Target to stop Toaster
 stop-toaster:
 	@echo "Stopping Toaster..."
-	cd ~/work/poky/poky/ && source oe-init-build-env && source toaster stop
+	cd ~/git/poky/ && source oe-init-build-env && source toaster stop
 
 # Task : Create a target restart-toaster depends on stop-toaster and start-toaster
 restart-toaster: stop-toaster start-toaster
