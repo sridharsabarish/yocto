@@ -3,9 +3,11 @@
 # Hint: What output do you see when you make build_kernel_module
 
 obj-m += yocto-driver.o
+
 hello:
-	echo "This is a simple Makefile"
-	echo "This line will print if the file hello does not exist."
+	echo "This is the target hello!"
+	echo "This is the default target of make"
+	
 
 build_kernel_module:    yocto-driver.c
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules

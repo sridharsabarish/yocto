@@ -6,7 +6,7 @@
 # Populate the clean-extract target with an @echo "Removing extracted source from ${WORKDIR}"
 # @echo "source oe-init-build-env && devtool update ${RECIPE} ${WORKDIR}"
 # 	@rm -rf ${WORKDIR}
-POKY_DIR = "~/work/poky/poky"
+POKY_DIR = "~/git/poky"
 WORKDIR ?= "$(POKY_DIR)/build/workspace/sources/${RECIPE}"
 RECIPE ?= "hello"
 extract:
