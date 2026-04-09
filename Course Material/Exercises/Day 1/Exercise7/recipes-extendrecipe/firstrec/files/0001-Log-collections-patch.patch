@@ -1,0 +1,27 @@
+From 5790d6bf8fdaa012259422b5d0ce10d33baff575 Mon Sep 17 00:00:00 2001
+From: yocto <yocto@Yocto-Course.myguest.virtualbox.org>
+Date: Sat, 11 Jan 2025 14:52:26 +0100
+Subject: [PATCH] Log collections patch
+
+---
+ somescript.sh | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 somescript.sh
+
+diff --git a/somescript.sh b/somescript.sh
+new file mode 100644
+index 0000000..b5e2db5
+--- /dev/null
++++ b/somescript.sh
+@@ -0,0 +1,11 @@
++#!/bin/bash
++
++echo "Running ifconfig"
++ifconfig
++
++echo "Running nproc"
++nproc
++
++echo "Running free"
++free
++
