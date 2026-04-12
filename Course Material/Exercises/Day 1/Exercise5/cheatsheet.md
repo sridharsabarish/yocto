@@ -22,3 +22,9 @@
 * Remember to create folders with the names "classes" and "includes" in your layerdirectory and name the files `.bbclass` and `.inc`.
 * `Inherit` keyword is used for classes and `include` used for `.inc` files.
 * `require` keyword expect a file to be present where as `include` is a bit less stict.
+
+
+## Find recipes
+
+* `bitbake-layers show-recipes | grep <recipename>`
+* `devtool find-recipe recipename`

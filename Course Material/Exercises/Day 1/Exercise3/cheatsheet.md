@@ -17,9 +17,17 @@
 
 ## Bitbake environment flag 
 
+* You can put the code or question (from the exercise) in a .bb file and then use bitbake -e to verify your outputs.
+
+To test the output you can use the following command below.
+
 
 ```shell
 
 bitbake your recipe -e | grep ^VARIABLE=
 
 ```
+
+Eg : `bitbake your-recipe -e | grep ^A=|`
+
+

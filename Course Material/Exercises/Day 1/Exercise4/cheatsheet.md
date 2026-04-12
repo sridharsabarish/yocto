@@ -15,3 +15,11 @@
 * `.bbappend` used to extend an existing recipe! It takes the existing recipe and adds some more info on top of that!
 
 
+## Include vs Require
+* Require will cause error if file is missing
+    * Usage: `require filename.inc` or `require filename.bbclass`
+* Include is less strict
+    * usage: `include filename.inc` or `include filename.bbclass`
+
+## Inherit
+* Only applicable for classes.
