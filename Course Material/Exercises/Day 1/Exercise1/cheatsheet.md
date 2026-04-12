@@ -8,10 +8,9 @@
 * `source oe-init-env.sh`
 
 ### local.conf
-* Overrides everything.
-* No version control, bad practice to use.
+* Good reference for learning.
 
-### Compile a Recipe/Image
+### Build a Recipe/Image
 
 * `bitbake core-image-minimal` - The base image with minimal features
 * `bitbake core-image-full-cmdline` - Complete CLI Linux image
@@ -19,6 +18,7 @@
 ### Starting QEMU
 
 * `runqemu` `imagename`
+* Try the `nographic` flag of runqemu
 
 
 ## Linux commands

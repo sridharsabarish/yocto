@@ -13,3 +13,13 @@
     - Always done after append and prepend operations
 
 
+# Tip 
+
+## Bitbake environment flag 
+
+
+```shell
+
+bitbake your recipe -e | grep ^VARIABLE=
+
+```
