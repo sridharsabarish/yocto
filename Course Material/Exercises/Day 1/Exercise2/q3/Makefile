@@ -4,14 +4,14 @@ SHELL := /bin/bash
 
 #Tip : Remember to give a tab spacing when you run your commands.
 # Task 1:
-# Populate a target called build-images with an @echo "Saying it is building the image"
+# Populate a target called build-core-image with an @echo "Saying it is building the image"
 # Populate the build-image with and @echo "cd ~/git/poky/ && source oe-init-build-env && bitbake core-image-minimal"
 
 
 # Task 2:
 # Create a target called clean-build
 # Populate the clean-build with an @echo "Saying it is cleaning the build directory"
-# Populate the clean-build with and @echo "cd ~/git/poky && source oe-init-build-env && bitbake -c cleanall"
+# Populate the clean-build with and @echo "cd ~/git/poky && source oe-init-build-env && bitbake -c cleanall core-image-minimal"
 # Remember we don't want to clean our build as it would cause delays with the course!!
 
 # Targets

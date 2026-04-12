@@ -17,5 +17,5 @@ cd ~/git/poky && source oe-init-build-env && bitbake core-image-minimal
 
 clean-build:
 echo "Cleaning the build directory"
-@echo "cd ~/git/poky/ && source oe-init-build-env && bitbake -c cleanall"
+@echo "cd ~/git/poky/ && source oe-init-build-env && bitbake -c cleanall core-image-minimal"
 
