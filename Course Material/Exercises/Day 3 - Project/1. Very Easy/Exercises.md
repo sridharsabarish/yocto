@@ -11,7 +11,7 @@ https://github.com/doctorfree/ninvaders
 1. Create a recipe for this application! 
     - Is there a flag to specify a different branch?
 
-2. What do you think happens when you inherit cmake?
+2. What do you think happens when you inherit cmake? (ask LLM!)
 
 3. Build the image, burn it to MicroSD and then try with RPI!
 
@@ -24,8 +24,6 @@ https://github.com/doctorfree/ninvaders
 1. Your task is to create a recipe for this application 
 2. Find out how to integrate this into your linux image.
 3. Burn the generated image to RPI and try running the command `cmatrix`
-
-
 
 #### Questions to think about!
 * What tool can we use to create a recipe?

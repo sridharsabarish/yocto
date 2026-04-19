@@ -1,0 +1,12 @@
+## 1. Comparison is the thief of Joy.
+
+* Another easy way to include something into your image is to compare whats been already built by `core-image-full-cmdline`
+* This would ensure that we woudn't have to wait long time to rebuild!
+
+### Task
+* Explore QEMU with `core-image-full-cmdline` image
+    * Make a note of applications in `ls /usr/bin`
+        * Try to find atleast 5 different application that are not present in your image.
+* Add support for these newly found application in your image!
+* Build your image
+* Flash the image to rpi and test!
