@@ -25,9 +25,11 @@ https://github.com/doctorfree/ninvaders
 2. Find out how to integrate this into your linux image.
 3. Burn the generated image to RPI and try running the command `cmatrix`
 
+
+
 #### Questions to think about!
 * What tool can we use to create a recipe?
 * Where can we find licensing information?
-* What does chatGPT say when you post the error message?
+* Tip : **What does chatGPT say when you post the error message?**
 
 
