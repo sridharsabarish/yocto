@@ -15,12 +15,16 @@
 * Try to add rust to IMAGE_INSTALL and try to build it!
 
 
-### Adding RUST
+### Adding RUST and cargo
 
 ```shell
-IMAGE_INSTALL +="rust"
+IMAGE_INSTALL +="rust cargo"
 
 ```
+* Note this will take around 3-4 hours.
+* once done, try to create a new project using 
+`cargo new hello-world`
+* `cd hello-world` and run `cargo run` to run your own rust code!!!!!!!!!!!
 
 
 
