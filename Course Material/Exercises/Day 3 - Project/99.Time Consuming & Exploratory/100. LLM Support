@@ -1,0 +1,23 @@
+# Time for Hallucinations! (Verified!)
+
+* This task aims at creating a personalised LLM capable of running on a RPI!
+* We can use `llama.cpp` an open source tool to do this task!
+
+## Source
+
+`https://github.com/ggml-org/llama.cpp`
+
+## Tasks
+
+* make a recipe from this repo
+* try building it and resolve errors using LLMs or online research
+* Try to integrate it!
+
+
+### Open Source Model
+* Try using a open source model like qwen3.5-0.8b optimized for RPI 
+* This could be run in raspberry as it is a bit light weight!
+
+### Find out how to run it in PI!
+
+* Try playing around!
