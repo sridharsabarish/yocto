@@ -15,6 +15,7 @@
 * Try to add rust to IMAGE_INSTALL and try to build it!
 
 
+
 ### Adding RUST and cargo
 
 ```shell
@@ -25,6 +26,4 @@ IMAGE_INSTALL +="rust cargo"
 * once done, try to create a new project using 
 `cargo new hello-world`
 * `cd hello-world` and run `cargo run` to run your own rust code!!!!!!!!!!!
-
-
 

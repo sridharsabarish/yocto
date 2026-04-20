@@ -54,6 +54,26 @@
 * Verify it is installed by running
 * `cowsay moo` in your terminal! 
 
+
+## 4. SL (no not your public transportation app)
+
+### Source 
+* Go to `https://github.com/mtoyoda/sl`
+
+### Task
+* Create a recipe for this app!
+* Try building the recipe!
+    * Potential Issues
+        * License needs to be changed? What do we do when there is none?
+        * Do we have all the dependencies met?
+        * does do_compile work?
+            * Maybe ask chatgpt what to do to fix? 
+        * Are we installing anything?
+            * Maybe we should install the built binary somewhere!!!!!!
+* **Tip:** Ask for solution, if you are stuck for more than 20mins!   
+
+* Once built, try to run it in raspberry pi and see the output!!!
+
 ## 4. Comparison is the thief of Joy.
 
 * Another easy way to include something into your image is to compare whats been already built by `core-image-full-cmdline`
