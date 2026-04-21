@@ -74,7 +74,7 @@
 
 * Once built, try to run it in raspberry pi and see the output!!!
 
-## 4. Comparison is the thief of Joy.
+## 5. Comparison is the thief of Joy.
 
 * Another easy way to include something into your image is to compare whats been already built by `core-image-full-cmdline`
 * This would ensure that we woudn't have to wait long time to rebuild!
